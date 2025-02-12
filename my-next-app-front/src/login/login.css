@@ -1,0 +1,188 @@
+/* 전체 화면 스타일 */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  
+
+
+
+  html, body {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #fff;
+    font-family: "Arial", sans-serif;
+    overflow: hidden; 
+  }
+
+/* ✅ 루트 컨테이너 (div#root) */
+    #root {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        max-width: 460px; /* `.login-container`와 동일한 크기 */
+        height: auto;
+    }
+
+  /* 로그인 박스 */
+  .login-container {
+    width: 100%;
+    max-width: 460px; /* 데스크톱에서는 460px 유지, 모바일에서는 자동 조정 */
+    padding: 40px;
+    text-align: center;
+    margin: 0 auto; /* ✅ 불필요한 여백 제거 */
+    background: #fff; /* ✅ 배경을 흰색으로 설정 */
+  }
+  
+  /* 로고 */
+  .login-logo {
+    font-size: 28px;
+    font-weight: bold;
+    margin-bottom: 30px;
+  }
+  
+  /* 탭 스타일 */
+  .login-tabs {
+    display: flex;
+    justify-content: center;
+    border-bottom: 2px solid #eee;
+    margin-bottom: 20px;
+  }
+  
+  .login-tab {
+    padding: 10px 15px;
+    font-size: 16px;
+    color: #666;
+    cursor: pointer;
+    border-bottom: 2px solid transparent;
+    transition: 0.3s;
+  }
+  
+  .login-tab.active-tab {
+    color: black;
+    font-weight: bold;
+    border-bottom: 2px solid black;
+  }
+  
+  /* 입력 필드 */
+  .login-input {
+    width: 100%; /* 모바일에서도 자동 조정 */
+    max-width: 460px; /* 데스크톱에서는 460px 유지 */
+    height: 56px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    font-size: 18px;
+    background: #fff;
+    text-align: left;
+    display: block;
+    margin: 0 auto 15px;
+    box-sizing: border-box;
+  }
+  
+  /* 입력 필드 포커스 효과 */
+  .login-input:focus {
+    border: 2px solid #000;
+    outline: none;
+  }
+  
+  /* 로그인 상태 유지 체크박스 */
+  .checkbox-container {
+    width: 100%;
+    max-width: 460px;
+    margin: 10px auto;
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+    color: #333;
+  }
+  
+  .checkbox-container input {
+    margin-right: 8px;
+  }
+  
+  /* 로그인 버튼 */
+  .login-button {
+    width: 100%;
+    max-width: 460px;
+    height: 56px;
+    background: #000;
+    color: white;
+    border: none;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+    display: block;
+    margin: 15px auto 0;
+    box-sizing: border-box;
+  }
+  
+  /* 버튼 호버 효과 */
+  .login-button:hover {
+    background: #333;
+  }
+  
+  /* 하단 링크 스타일 */
+  .footer-links {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 20px;
+    font-size: 14px;
+  }
+  
+  .footer-links a {
+    margin: 0 10px;
+    color: #666;
+    text-decoration: none;
+  }
+  
+  .footer-links a:hover {
+    text-decoration: underline;
+    color: black;
+  }
+  
+  /* 📌 📌 📌 반응형 스타일 적용 📌 📌 📌 */
+  @media (max-width: 768px) {
+    .login-container {
+      width: 90%; /* 화면의 90%를 차지하도록 조정 */
+      padding: 30px; /* 패딩 줄이기 */
+    }
+  
+    .login-logo {
+      font-size: 24px; /* 모바일에서는 글씨 크기 줄이기 */
+    }
+  
+    .login-input,
+    .login-button,
+    .checkbox-container {
+      width: 100%; /* 모바일에서는 가득 차게 */
+      max-width: none; /* 최대 크기 제한 해제 */
+    }
+  
+    .login-input {
+      height: 50px; /* 입력 필드 높이 줄이기 */
+      font-size: 16px;
+    }
+  
+    .login-button {
+      height: 50px; /* 버튼 높이 줄이기 */
+      font-size: 16px;
+    }
+  
+    .footer-links {
+      font-size: 12px;
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .footer-links a {
+      margin-bottom: 5px;
+    }
+  }
+  
