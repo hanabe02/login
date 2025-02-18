@@ -4,6 +4,7 @@ import { useDispatch, useSelector } from "react-redux";
 import "./login.css"; 
 import { loginClick } from "../redux/auth/authActions";
 import {useNavigate} from 'react-router-dom';
+
 // ✅ 페이지 이동을 위한 useNavigate 추가
 
 
@@ -28,7 +29,6 @@ function Login() {
     function ButtonClick(){
         // 버튼 클릭시 dispatch 함수 실행
         dispatch(loginClick(username, password));
-        console.log(serviceToken);
     } 
 
     function UsernameChange(e){
@@ -36,6 +36,10 @@ function Login() {
     }
     function PasswordChange(e){
         setPassword(e.target.value);
+    }
+
+    function click(){
+        navigate("./HomePage/homePage");
     }
     
     return (
@@ -72,7 +76,7 @@ function Login() {
 
         {/* 하단 링크 */}
         <div className="footer-links">
-            <a href="#">회원가입</a>
+            <a href="/Homepage/homePage">회원가입</a>
             <a href="#">넥슨ID 찾기</a>
             <a href="#">비밀번호 찾기</a>
         </div>

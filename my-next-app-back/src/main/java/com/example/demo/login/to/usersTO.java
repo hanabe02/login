@@ -11,4 +11,5 @@ public class usersTO {
     private String name;
     private String lv;
     private String job;
+    private String email;
 }

@@ -1,0 +1,229 @@
+/* 전체 페이지 중앙 정렬 */
+.container {
+    display: flex;
+    justify-content: center;
+    padding-top: 100px;
+    min-height: 100vh;
+    background-color: #ffffff;
+}
+
+/* 회원가입 박스 */
+.signup-box {
+    background: white;
+    border-radius: 10px;
+    text-align: center;
+    width: 500px; /* 기본 PC 크기 */
+    padding: 30px 20px;
+}
+
+/* 제목 */
+.signup-box h1 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+/* 설명 문구 */
+.signup-box p {
+    color: gray;
+    font-size: 14px;
+    margin-bottom: 20px;
+}
+
+/* 버튼 기본 스타일 */
+.signup-btn, .social-btn {
+    width: 100%;
+    padding: 14px; /* 버튼 크기 조금 키움 */
+    margin-bottom: 10px;
+    border: none;
+    border-radius: 8px; /* 둥근 버튼 */
+    font-size: 16px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background 0.3s, transform 0.2s;
+}
+
+/* 버튼 호버 효과 */
+.signup-btn:hover, .social-btn:hover {
+    opacity: 0.8;
+    transform: scale(1.02);
+}
+
+/* 이메일 & 전화번호 버튼 */
+.signup-btn {
+    background: white;
+    border: 1px solid gray;
+    color: black;
+}
+
+.signup-btn:hover {
+    background: #f0f0f0;
+}
+
+/* 구분선 */
+.divider {
+    margin: 15px 0;
+    font-size: 14px;
+    color: gray;
+    font-weight: bold;
+}
+
+/* 소셜 로그인 버튼 색상 */
+.social-btn.google {
+    background: #db4437;
+    color: white;
+}
+
+.social-btn.facebook {
+    background: #4267b2;
+    color: white;
+}
+
+.social-btn.apple {
+    background: black;
+    color: white;
+}
+
+.social-btn.twitter {
+    background: #1da1f2;
+    color: white;
+}
+
+.social-btn.line {
+    background: #00c300;
+    color: white;
+}
+
+.social-btn.vk {
+    background: #4a76a8;
+    color: white;
+}
+
+/* 모달 오버레이 */
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.3); /* 배경 흐리게 */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* 모달 창 스타일 */
+.modal-content {
+    background: white;
+    padding: 20px;
+    width: 400px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    text-align: center;
+}
+
+/* 입력 필드 */
+.input-field {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid gray;
+    border-radius: 5px;
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+
+/* 가입하기 버튼 */
+.submit-btn {
+    width: 100%;
+    padding: 12px;
+    border: none;
+    border-radius: 5px;
+    background: #000000; /* 검은색 배경 */
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.error-message {
+    color: red !important;
+    font-weight: bold;  
+    font-size: 14px;
+    margin-top: 5px;
+}
+.submit-btn:hover {
+    background: #333333; /* 어두운 회색 (호버 시 효과) */
+}
+/* 닫기 버튼 */
+.cancel-btn {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid gray;
+    border-radius: 5px;
+    background: white;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.cancel-btn:hover {
+    background: #f0f0f0;
+}
+
+/* 반응형 디자인 (모바일 & 태블릿) */
+@media (max-width: 768px) {
+    .container {
+        padding-top: 50px;
+        padding-bottom: 50px;
+        min-height: auto;
+    }
+
+    .signup-box {
+        width: 90%; /* 모바일에서 너무 크지 않게 */
+        padding: 20px;
+    }
+
+    .signup-btn, .social-btn {
+        padding: 12px;
+        font-size: 14px;
+    }
+
+    .signup-box h1 {
+        font-size: 20px;
+    }
+
+    .signup-box p {
+        font-size: 12px;
+    }
+
+    .divider {
+        font-size: 12px;
+    }
+}
+
+@media (max-width: 480px) {
+    .container {
+        padding-top: 30px;
+        padding-bottom: 30px;
+    }
+
+    .signup-box {
+        width: 95%; /* 더 작은 화면에서는 95% 사용 */
+        padding: 15px;
+    }
+
+    .signup-btn, .social-btn {
+        padding: 10px;
+        font-size: 14px;
+        border-radius: 5px;
+    }
+
+    .signup-box h1 {
+        font-size: 18px;
+    }
+
+    .signup-box p {
+        font-size: 11px;
+    }
+
+    .divider {
+        font-size: 11px;
+    }
+}

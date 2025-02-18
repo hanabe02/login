@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom/client';
 import { Provider } from 'react-redux';
 import store from "./redux/store";
 import App from './app';
+import HomePage from './HomePage/homePage';
 
 const root = ReactDOM.createRoot(document.getElementById("root")); // ✅ React 18 방식
 

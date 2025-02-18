@@ -48,4 +48,45 @@ public class loginController {
             return map;
         }
     }
+
+    @PostMapping("/sign")
+    public void sign(@RequestBody Map<String, String> params) {
+
+        System.out.println(params.get("name"));
+        System.out.println(params.get("id"));
+        System.out.println(params.get("email"));
+        System.out.println(params.get("password"));
+
+        String name = params.get("name");
+        String id = params.get("id");
+        String email = params.get("email");
+        String password = params.get("password");
+
+        loginService.sign(name, id, email, password);
+    }
+
+    @PostMapping("/profileEdit")
+    public void profileEdit(@RequestBody Map<String, String> params) {
+
+        System.out.println(params.get("name"));
+        System.out.println(params.get("id"));
+        System.out.println(params.get("email"));
+        System.out.println(params.get("password"));
+
+        String name = params.get("name");
+        String id = params.get("id");
+        String email = params.get("email");
+        String password = params.get("password");
+
+        loginService.edit(name, id, email, password);
+    }
+
+    @PostMapping("/userDelete")
+    public void userDelete(@RequestBody Map<String, String> params) {
+
+        String email = params.get("email");
+        System.out.println("디버깅 포인트 : 컨트롤러");
+        System.out.println(email);
+        loginService.delete(email);
+    }
 }
