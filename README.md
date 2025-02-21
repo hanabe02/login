@@ -62,4 +62,6 @@ DB : SQL Gate for Oracle 사용
 
 🛠️ 백엔드 : Spring Boot + jpa -> 회원가입, 회원삭제, 회원정보 수정, 회원 정보 조회
 
+jpa 부분 추가 구현
+
 
