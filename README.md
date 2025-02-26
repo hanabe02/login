@@ -67,4 +67,20 @@ jpa 부분 추가 구현
 🛠️ 로그인 세션 관리 : 커스텀 백엔드 API 사용 
 🛠️ 세션 관리 : true, false 조건 사용
 
+개념 추가 : 2025-02-26 
+  ssr, csr, mpa, spa 
+
+  csr 클라이언트 사이드 렌더링 - spa 단일 
+    한 번 접속할 때 프로젝트시 필요한 화면 전부 다운 하고 화면이 보인다.
+    ex) 프로젝트 열기 한 후 프로젝트 안에서 /login -> /logi/project 이런식으로 url 이 변경되는 것 
+    
+    spa - single page application 
+      하나의 페이지로 구성된 웹 애플리케이션 -> 하나의 페이지 안에서 모든 url 이동이 이루어진다. csr 을 사용
+    
+  ssr 서버 사이드 렌더링 - mpa 멀티
+    접속 할 떄 내가 봐야할 화면 일부만 보인다.
+    ex) localhost:3000 접속시, f5 화면 재 렌더링시
+
+    mpa - multi page Application
+      탭을 이동할 때마다 서버로 부터 새로운 html 을 새로 받아와서 페이지 전체를 렌더링 하는 웹 페이지 구성 방식이다.
 
