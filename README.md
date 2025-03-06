@@ -1,5 +1,5 @@
 🏗️ 프론트엔드: React + VS code
-이 프로젝트는 React 기반으로 개발되었으며, redux-saga를 활용하여 서버와 연동합니다.
+이 프로젝트는 React 기반으로 개발되었으며, redux-saga를 활용하여 서버와 연동합니다
 
 📌 React 프로젝트 실행 방법
 1️⃣ Node.js 설치
